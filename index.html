@@ -8,7 +8,167 @@
   <script src="./assets/js/script.js" defer></script>
 </head>
 <body>
-  <h1>Hello, GitHub Pages!</h1>
-  <img src="./assets/images/VG LOGO 2 Small.png" alt="Logo">
+  <header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo-link" aria-label="VIDEO GUARD">
+      <img
+        src="./assets/images/logos/Video Guard LOGO Black.png"
+        alt="VIDEO GUARD Logo"
+        class="site-logo"
+      >
+    </a>
+
+    <nav class="desktop-nav" aria-label="Hauptnavigation">
+      <a href="#">Überwachung</a>
+      <a href="#">Brandfrüherkennung</a>
+      <a href="#">Über uns</a>
+      <a href="#">Kontakt</a>
+    </nav>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Menü öffnen"
+      aria-expanded="false"
+      aria-controls="mobileMenu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-nav" id="mobileMenu" aria-label="Mobile Navigation">
+    <a href="#">Überwachung</a>
+    <a href="#">Brandfrüherkennung</a>
+    <a href="#">Über uns</a>
+    <a href="#">Kontakt</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <img
+    src="./assets/images/images/Desktop_L8_NEW.png"
+    alt="Video Guard surveillance tower at construction site"
+    class="hero-image hero-image-desktop"
+  >
+  <img
+    src="./assets/images/images/NEW_Desktop_2.png"
+    alt="Video Guard surveillance tower at construction site"
+    class="hero-image hero-image-tablet"
+  >
+  <img
+    src="./assets/images/images/Desktop_S8_NEW.png"
+    alt="Video Guard surveillance tower at construction site"
+    class="hero-image hero-image-mobile"
+  >
+
+  <div class="hero-overlay hero-overlay-desktop"></div>
+  <div class="hero-overlay-blur hero-overlay-blur-desktop"></div>
+  <div class="hero-overlay hero-overlay-mobile"></div>
+  <div class="hero-overlay-blur hero-overlay-blur-mobile"></div>
+
+  <div class="hero-content">
+    <div class="hero-container">
+      <div class="hero-top">
+        <div class="hero-copy desktop-hero-copy">
+          <div class="live-badge live-badge-desktop">
+            <div class="live-dot live-pulse-fade"></div>
+            <span>24/7 Baustellüberwachung seit 2006</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span>Mobile Videoüberwachung</span><br>
+            <span>für Baustellen</span>
+          </h1>
+
+          <p class="hero-text">
+            VIDEO GUARD bietet intelligente Videoüberwachung für den perfekten Schutz rund um die Uhr.
+            Maximale Sicherheit bei minimalen Bewachungskosten.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary">Kostenloses Angebot anfragen</a>
+            <a href="#" class="btn btn-secondary">Leitfaden herunterladen</a>
+          </div>
+        </div>
+
+        <div class="hero-copy mobile-hero-copy">
+          <div class="live-badge live-badge-mobile">
+            <div class="live-dot live-pulse-fade"></div>
+            <span>24/7 Baustellüberwachung</span>
+          </div>
+
+          <h1 class="hero-title hero-title-mobile">
+            <span>Mobile Videoüberwachung</span><br>
+            <span>für Baustellen</span>
+          </h1>
+
+          <div class="hero-actions mobile-actions">
+            <a href="#" class="btn btn-primary">Angebot anfragen</a>
+            <a href="#" class="btn btn-secondary">Leitfaden herunterladen</a>
+          </div>
+
+          <div class="mobile-stat-rotator">
+            <div class="mobile-stat active">
+              <div class="mobile-stat-number counter" data-target="275301">0</div>
+              <div class="mobile-stat-label">Gefahren abgewendet</div>
+            </div>
+            <div class="mobile-stat">
+              <div class="mobile-stat-number counter" data-target="8217">0</div>
+              <div class="mobile-stat-label">Geschützte Baustellen</div>
+            </div>
+            <div class="mobile-stat">
+              <div class="mobile-stat-number counter" data-target="2226">0</div>
+              <div class="mobile-stat-label">Zufriedene Kunden</div>
+            </div>
+          </div>
+
+          <div class="hero-divider"></div>
+        </div>
+      </div>
+
+      <div class="hero-bottom">
+        <div class="hero-divider"></div>
+
+        <div class="hero-bottom-inner">
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat-number counter" data-target="275301">0</div>
+              <div class="hero-stat-label">Gefahren abgewendet</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-number counter" data-target="8217">0</div>
+              <div class="hero-stat-label">Geschützte Baustellen</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-number counter" data-target="2226">0</div>
+              <div class="hero-stat-label">Zufriedene Kunden</div>
+            </div>
+          </div>
+
+          <div class="hero-message-box">
+            <div class="hero-message-icon-wrap">
+              <img src="./assets/images/icons/Message_1.png" alt="" class="hero-message-icon active">
+              <img src="./assets/images/icons/Message_2.png" alt="" class="hero-message-icon">
+              <img src="./assets/images/icons/Message_3.png" alt="" class="hero-message-icon">
+              <img src="./assets/images/icons/Message_4.png" alt="" class="hero-message-icon">
+              <img src="./assets/images/icons/Message_5.png" alt="" class="hero-message-icon">
+            </div>
+
+            <div class="hero-message-text-wrap">
+              <div class="hero-message-text active">Leitstelle in Deutschland mit geschultem Fachpersonal</div>
+              <div class="hero-message-text">Auch bei Stromausfall einsatzfähig</div>
+              <div class="hero-message-text">Zuverlässige Erkennung bei Dunkelheit</div>
+              <div class="hero-message-text">Bis zu 250.000 € Absicherung inklusive</div>
+              <div class="hero-message-text">Redundante Systeme für Schutz vor Ausfällen und Sabotage</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 </body>
 </html>
