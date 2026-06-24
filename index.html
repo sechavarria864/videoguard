@@ -895,6 +895,141 @@
     </div>
   </div>
 </section>
+
+  <!-- ============================================================
+     MAX FLEXIBILITAET SECTION
+     Files needed (./assets/images/Images/):
+       - Flexibilitaet_1.png  (500m²)
+       - Flexibilitaet_2.png  (2.000m²)
+       - Flexibilitaet_3.png  (5.000m²)
+     ============================================================ -->
+<section class="flexibilitaet">
+  <div class="flexibilitaet__inner">
+
+    <!-- DESKTOP: 2-column layout -->
+    <div class="flexibilitaet__desktop">
+
+      <!-- Left: text + CTAs + nav -->
+      <div class="flexibilitaet__left">
+        <div class="flexibilitaet__title-wrap">
+          <div class="flexibilitaet__accent-bar"></div>
+          <h2 class="flexibilitaet__title">Maximale Flexibilität – unsere Sicherheit wächst mit Ihrer</h2>
+        </div>
+        <p class="flexibilitaet__text">
+          Bauprojekte sind immer dynamisch. Eine Baustelle, die heute 2.000 Quadratmeter umfasst,
+          kann in drei Monaten doppelt so groß sein. Sie wandert Abschnitt für Abschnitt, neue
+          Bereiche entstehen und andere werden geräumt. Unser Sicherheitssystem passt sich Ihnen an.
+        </p>
+        <p class="flexibilitaet__text">
+          Brauchen Sie zusätzliche Kameratürme? Wir liefern. Soll ein Turm an einen neuen Standort
+          umziehen? Erledigen wir. Verändert sich der Risikobereich Ihres Projekts?
+        </p>
+        <p class="flexibilitaet__text flexibilitaet__text--bold">
+          Wir passen die Überwachungszonen in Echtzeit an, einfach in der App oder direkt mit
+          unserer Alarmzentrale abgestimmt.
+        </p>
+        <div class="flexibilitaet__cta-row">
+          <button class="flexibilitaet__btn flexibilitaet__btn--primary" onclick="document.querySelector('[data-section=&quot;angebot-erhalten&quot;]')?.scrollIntoView({behavior:'smooth',block:'start'})">
+            Jetzt Objekt Schützen
+          </button>
+          <button class="flexibilitaet__btn flexibilitaet__btn--secondary">Mehr erfahren</button>
+        </div>
+        <div class="flexibilitaet__nav">
+          <button class="flexibilitaet__arrow" id="flexPrev" disabled aria-label="Zurück">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          <button class="flexibilitaet__arrow" id="flexNext" aria-label="Weiter">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right: overflow carousel -->
+      <div class="flexibilitaet__carousel-outer">
+        <div class="flexibilitaet__carousel-track" id="flexTrack">
+
+          <div class="flexibilitaet__slide">
+            <img src="./assets/images/Images/Flexibilitaet_1.png" alt="500m²" loading="lazy">
+            <div class="flexibilitaet__slide-overlay"></div>
+            <div class="flexibilitaet__slide-label">500m²</div>
+          </div>
+
+          <div class="flexibilitaet__slide">
+            <img src="./assets/images/Images/Flexibilitaet_2.png" alt="2.000m²" loading="lazy">
+            <div class="flexibilitaet__slide-overlay"></div>
+            <div class="flexibilitaet__slide-label">2.000m²</div>
+          </div>
+
+          <div class="flexibilitaet__slide">
+            <img src="./assets/images/Images/Flexibilitaet_3.png" alt="5.000m²" loading="lazy">
+            <div class="flexibilitaet__slide-overlay"></div>
+            <div class="flexibilitaet__slide-label">5.000m²</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE: title → images → text → buttons -->
+    <div class="flexibilitaet__mobile">
+      <div class="flexibilitaet__title-wrap">
+        <div class="flexibilitaet__accent-bar"></div>
+        <h2 class="flexibilitaet__title">Maximale Flexibilität – unsere Sicherheit wächst mit Ihrer</h2>
+      </div>
+
+      <!-- Horizontal scrollable images -->
+      <div class="flexibilitaet__mobile-scroll">
+        <div class="flexibilitaet__mobile-track">
+
+          <div class="flexibilitaet__mobile-slide">
+            <img src="./assets/images/Images/Flexibilitaet_1.png" alt="500m²" loading="lazy">
+            <div class="flexibilitaet__slide-overlay"></div>
+            <div class="flexibilitaet__slide-label">500m²</div>
+          </div>
+
+          <div class="flexibilitaet__mobile-slide">
+            <img src="./assets/images/Images/Flexibilitaet_2.png" alt="2.000m²" loading="lazy">
+            <div class="flexibilitaet__slide-overlay"></div>
+            <div class="flexibilitaet__slide-label">2.000m²</div>
+          </div>
+
+          <div class="flexibilitaet__mobile-slide">
+            <img src="./assets/images/Images/Flexibilitaet_3.png" alt="5.000m²" loading="lazy">
+            <div class="flexibilitaet__slide-overlay"></div>
+            <div class="flexibilitaet__slide-label">5.000m²</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Description text -->
+      <p class="flexibilitaet__text">
+        Bauprojekte sind immer dynamisch. Eine Baustelle, die heute 2.000 Quadratmeter umfasst,
+        kann in drei Monaten doppelt so groß sein. Sie wandert Abschnitt für Abschnitt, neue
+        Bereiche entstehen und andere werden geräumt. Unser Sicherheitssystem passt sich Ihnen an.
+      </p>
+      <p class="flexibilitaet__text">
+        Brauchen Sie zusätzliche Kameratürme? Wir liefern. Soll ein Turm an einen neuen Standort
+        umziehen? Erledigen wir. Verändert sich der Risikobereich Ihres Projekts?
+      </p>
+      <p class="flexibilitaet__text flexibilitaet__text--bold">
+        Wir passen die Überwachungszonen in Echtzeit an, einfach in der App oder direkt mit
+        unserer Alarmzentrale abgestimmt.
+      </p>
+      <div class="flexibilitaet__cta-row">
+        <button class="flexibilitaet__btn flexibilitaet__btn--primary" onclick="document.querySelector('[data-section=&quot;angebot-erhalten&quot;]')?.scrollIntoView({behavior:'smooth',block:'start'})">
+          Jetzt Objekt Schützen
+        </button>
+        <button class="flexibilitaet__btn flexibilitaet__btn--secondary">Mehr erfahren</button>
+      </div>
+    </div>
+
+  </div>
+</section>
   <script src="./assets/js/script.js"></script>
 </body>
 </html>
