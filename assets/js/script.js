@@ -177,3 +177,43 @@ counters.forEach((counter) => {
 
   setTimeout(init, 50);
 })();
+
+/* ── TESTIMONIALS CAROUSEL ── */
+(function () {
+  var stage = document.getElementById('testimonialsStage');
+  var dotsContainer = document.getElementById('testimonialsDots');
+
+  if (!stage || !dotsContainer) return;
+
+  var cards = stage.querySelectorAll('.testimonials__card');
+  var dots = dotsContainer.querySelectorAll('.testimonials__dot');
+  var total = cards.length;
+  var current = 0;
+  var timer;
+
+  function goTo(index) {
+    cards[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = index;
+    cards[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next() {
+    goTo((current + 1) % total);
+  }
+
+  function startTimer() {
+    timer = setInterval(next, 5000);
+  }
+
+  dots.forEach(function (dot) {
+    dot.addEventListener('click', function () {
+      clearInterval(timer);
+      goTo(parseInt(this.getAttribute('data-index')));
+      startTimer();
+    });
+  });
+
+  startTimer();
+})();
