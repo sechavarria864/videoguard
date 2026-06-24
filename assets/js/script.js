@@ -217,3 +217,33 @@ counters.forEach((counter) => {
 
   startTimer();
 })();
+
+/* ── PROZESS CAROUSEL ── */
+(function () {
+  var track = document.getElementById('prozessTrack');
+  var prevBtn = document.getElementById('prozessPrev');
+  var nextBtn = document.getElementById('prozessNext');
+
+  if (!track || !prevBtn || !nextBtn) return;
+
+  var cards = track.querySelectorAll('.prozess__card');
+  var total = cards.length;
+  var current = 0;
+  var CARD_WIDTH_PCT = 58;
+
+  function updateTrack() {
+    track.style.transform = 'translateX(-' + (current * CARD_WIDTH_PCT) + '%)';
+    prevBtn.disabled = current <= 0;
+    nextBtn.disabled = current >= total - 1;
+  }
+
+  prevBtn.addEventListener('click', function () {
+    if (current > 0) { current--; updateTrack(); }
+  });
+
+  nextBtn.addEventListener('click', function () {
+    if (current < total - 1) { current++; updateTrack(); }
+  });
+
+  updateTrack();
+})();
