@@ -343,3 +343,30 @@ counters.forEach((counter) => {
     playBtn.style.display = 'none';
   });
 })();
+
+/* ── FAQ ACCORDION ── */
+(function () {
+  var items = document.querySelectorAll('.faq__item');
+
+  items.forEach(function (item) {
+    var trigger = item.querySelector('.faq__trigger');
+    if (!trigger) return;
+
+    trigger.addEventListener('click', function () {
+      var isOpen = item.classList.contains('is-open');
+
+      // Close all
+      items.forEach(function (i) {
+        i.classList.remove('is-open');
+        var t = i.querySelector('.faq__trigger');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      });
+
+      // Open clicked if it was closed
+      if (!isOpen) {
+        item.classList.add('is-open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+})();
