@@ -247,3 +247,55 @@ counters.forEach((counter) => {
 
   updateTrack();
 })();
+
+/* ── SCROLL REVEAL ── */
+(function () {
+  var selector = [
+    '.risks-slider__header',
+    '.risks-slider__track-wrap',
+    '.risks-slider__mobile-stack',
+    '.risks-slider__bottom',
+    '.how-it-works__header',
+    '.how-it-works__video-wrap',
+    '.how-it-works__cards',
+    '.testimonials__title-wrap',
+    '.testimonials__grid',
+    '.testimonials__logos-mobile',
+    '.prozess__left',
+    '.prozess__carousel-outer',
+    '.prozess__mobile .prozess__title-wrap',
+    '.prozess__mobile .prozess__subtitle',
+    '.prozess__mobile-scroll',
+    '.data-protection__title-wrap',
+    '.data-protection__subtitle',
+    '.data-protection__card'
+  ].join(', ');
+
+  var elements = document.querySelectorAll(selector);
+
+  if (!elements.length || !('IntersectionObserver' in window)) {
+    // Fallback: just make everything visible
+    elements.forEach(function (el) { el.classList.add('scroll-reveal-visible'); });
+    return;
+  }
+
+  elements.forEach(function (el) {
+    el.classList.add('scroll-reveal');
+  });
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('scroll-reveal-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  elements.forEach(function (el) {
+    observer.observe(el);
+  });
+})();
