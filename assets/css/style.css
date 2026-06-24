@@ -1127,3 +1127,148 @@ p {
     text-align: center;
   }
 }
+
+/* ============================================================
+   HOW IT WORKS CARDS SECTION
+   ============================================================ */
+
+.how-it-works {
+  padding: 80px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.how-it-works__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.how-it-works__header {
+  margin-bottom: 40px;
+}
+
+.how-it-works__title-wrap {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.how-it-works__accent-bar {
+  width: 4px;
+  flex-shrink: 0;
+  background: #F2E519;
+}
+
+.how-it-works__title {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.how-it-works__subtitle {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #5C5E62;
+  margin: 0;
+  max-width: 80ch;
+}
+
+.how-it-works__subtitle strong {
+  font-weight: 700;
+  color: #000000;
+}
+
+/* Video */
+.how-it-works__video-wrap {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+  aspect-ratio: 21 / 7;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 32px), calc(100% - 32px) 100%, 0 100%);
+}
+
+.how-it-works__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Desktop cards */
+.how-it-works__cards--desktop {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.how-it-works__cards--mobile {
+  display: none;
+}
+
+.how-it-works__card {
+  display: flex;
+  flex-direction: column;
+}
+
+.how-it-works__card img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-bottom: 12px;
+}
+
+.how-it-works__card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 8px;
+}
+
+.how-it-works__card p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #5C5E62;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .how-it-works {
+    padding: 48px 0;
+  }
+
+  .how-it-works__video-wrap {
+    aspect-ratio: 16 / 9;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 22px), calc(100% - 22px) 100%, 0 100%);
+  }
+
+  .how-it-works__cards--desktop {
+    display: none;
+  }
+
+  .how-it-works__cards--mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .how-it-works__card--mobile {
+    flex-direction: row;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .how-it-works__card--mobile img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0;
+  }
+
+  .how-it-works__card--mobile h3 {
+    margin-bottom: 4px;
+  }
+}
