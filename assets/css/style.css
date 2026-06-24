@@ -656,3 +656,160 @@ p {
     object-position: center 30%;
   }
 }
+
+/* ============================================================
+   PROJECT SIZE SECTION
+   Append this block to the bottom of assets/css/style.css
+   ============================================================ */
+
+/* ---------- Layout ---------- */
+.project-size {
+  background-color: #001F3F;
+  padding: 80px 24px;
+}
+
+.project-size__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.project-size__grid {
+  display: grid;
+  grid-template-columns: 1fr 0.75fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* ---------- Left: copy ---------- */
+.project-size__heading {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 24px;
+  line-height: 1.25;
+}
+
+.project-size__text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #ffffff;
+  margin: 0 0 32px;
+}
+
+.project-size__cta {
+  display: inline-block;
+  background-color: #F2E519;
+  color: #191845;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 24px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.project-size__cta:hover {
+  opacity: 0.88;
+}
+
+/* ---------- Right: card ---------- */
+.project-size__card {
+  background-color: #ffffff;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  /* clipped corner: bottom-right */
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+}
+
+.project-size__card-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #F2E519;
+  z-index: 1;
+}
+
+.project-size__card-heading {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  margin: 8px 0 24px;
+}
+
+/* ---------- Options ---------- */
+.project-size__options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.project-size__option {
+  width: 100%;
+  padding: 16px 24px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000000;
+  background-color: #ffffff;
+  border: 2px solid #E5E5E5;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.project-size__option:hover {
+  background-color: #f9f9f9;
+}
+
+.project-size__option--selected {
+  border-color: #F2E519;
+}
+
+/* ---------- Submit button ---------- */
+.project-size__submit {
+  width: 100%;
+  padding: 16px 24px;
+  background-color: #F2E519;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  text-align: center;
+}
+
+.project-size__submit:hover {
+  opacity: 0.88;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .project-size__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-size {
+    padding: 48px 16px;
+  }
+
+  .project-size__card {
+    padding: 24px;
+  }
+
+  .project-size__card-heading {
+    font-size: 1.125rem;
+  }
+
+  .project-size__option,
+  .project-size__submit {
+    font-size: 0.9375rem;
+  }
+}
