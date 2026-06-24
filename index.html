@@ -630,6 +630,224 @@
 
   </div>
 </section>
+
+  <!-- ============================================================
+     PROZESS CAROUSEL SECTION
+     Files needed (./assets/images/Images/):
+       - Prozess_1.png  (Angebotsanfrage)
+       - Prozess_2.png  (Planung)
+       - Prozess_3.png  (Vertrag & Lieferung)
+       - Prozess_4.png  (Überwachung)
+       - 5._Alarme.png
+       - 6._Wartung.png
+     ============================================================ -->
+<section class="prozess" data-section="prozess">
+  <div class="prozess__inner">
+
+    <!-- DESKTOP: 2-column layout -->
+    <div class="prozess__desktop">
+
+      <!-- Left: title, description, CTAs, nav arrows -->
+      <div class="prozess__left">
+        <div class="prozess__title-wrap">
+          <div class="prozess__accent-bar"></div>
+          <h2 class="prozess__title">Ihr Weg zur sicheren Baustelle – in 6 Schritten</h2>
+        </div>
+        <p class="prozess__subtitle">
+          Von der ersten Anfrage bis zur Installation – wir begleiten Sie Schritt für Schritt.
+          <strong>Persönlich, transparent und ohne Umwege.</strong>
+        </p>
+        <div class="prozess__cta-row">
+          <button class="prozess__btn prozess__btn--primary" onclick="document.querySelector('[data-section=&quot;angebot-erhalten&quot;]')?.scrollIntoView({behavior:'smooth',block:'start'})">
+            Jetzt Objekt Schützen
+          </button>
+          <button class="prozess__btn prozess__btn--secondary">Mehr erfahren</button>
+        </div>
+        <div class="prozess__nav">
+          <button class="prozess__arrow" id="prozessPrev" disabled aria-label="Zurück">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          <button class="prozess__arrow" id="prozessNext" aria-label="Weiter">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right: carousel -->
+      <div class="prozess__carousel-outer">
+        <div class="prozess__carousel-track" id="prozessTrack">
+
+          <div class="prozess__card">
+            <div class="prozess__card-img">
+              <img src="./assets/images/Images/Prozess_1.png" alt="Angebotsanfrage" loading="lazy">
+              <div class="prozess__card-img-gradient"></div>
+            </div>
+            <div class="prozess__card-body">
+              <div class="prozess__card-number">01</div>
+              <h3 class="prozess__card-title">Angebotsanfrage</h3>
+              <p class="prozess__card-desc">Sie senden uns eine Nachricht mit Ihren Kontaktdaten und einer kurzen Projektbeschreibung. Innerhalb von 60 Minuten erhalten Sie eine erste Rückmeldung.</p>
+            </div>
+          </div>
+
+          <div class="prozess__card">
+            <div class="prozess__card-img">
+              <img src="./assets/images/Images/Prozess_2.png" alt="Planung" loading="lazy">
+              <div class="prozess__card-img-gradient"></div>
+            </div>
+            <div class="prozess__card-body">
+              <div class="prozess__card-number">02</div>
+              <h3 class="prozess__card-title">Planung</h3>
+              <p class="prozess__card-desc">Ihr zuständiger Vertriebsmitarbeiter plant gemeinsam mit Ihnen das individuelle Sicherheitskonzept und erstellt ein optimales Kameralayout.</p>
+            </div>
+          </div>
+
+          <div class="prozess__card">
+            <div class="prozess__card-img">
+              <img src="./assets/images/Images/Prozess_3.png" alt="Vertrag & Lieferung" loading="lazy">
+              <div class="prozess__card-img-gradient"></div>
+            </div>
+            <div class="prozess__card-body">
+              <div class="prozess__card-number">03</div>
+              <h3 class="prozess__card-title">Vertrag &amp; Lieferung</h3>
+              <p class="prozess__card-desc">Nach Freigabe des finalen Angebots übernehmen wir Lieferung und Installation über unsere Logistik, damit Ihre Arbeit unterbrechungsfrei weiterläuft.</p>
+            </div>
+          </div>
+
+          <div class="prozess__card">
+            <div class="prozess__card-img">
+              <img src="./assets/images/Images/Prozess_4.png" alt="Überwachung" loading="lazy">
+              <div class="prozess__card-img-gradient"></div>
+            </div>
+            <div class="prozess__card-body">
+              <div class="prozess__card-number">04</div>
+              <h3 class="prozess__card-title">Überwachung</h3>
+              <p class="prozess__card-desc">Wir haben alles für Sie im Blick. Über unsere App können Sie optional jederzeit per LiveView selbst einen Blick auf Ihre Baustelle werfen.</p>
+            </div>
+          </div>
+
+          <div class="prozess__card">
+            <div class="prozess__card-img">
+              <img src="./assets/images/Images/5._Alarme.png" alt="Alarme" loading="lazy">
+              <div class="prozess__card-img-gradient"></div>
+            </div>
+            <div class="prozess__card-body">
+              <div class="prozess__card-number">05</div>
+              <h3 class="prozess__card-title">Alarme</h3>
+              <p class="prozess__card-desc">Unsere KI-gestützte Kameratechnik von Bosch und Avigilon erkennt Vorfälle präzise, während unsere Leitstelle alle Alarme zuverlässig bearbeitet.</p>
+            </div>
+          </div>
+
+          <div class="prozess__card">
+            <div class="prozess__card-img">
+              <img src="./assets/images/Images/6._Wartung.png" alt="Wartung" loading="lazy">
+              <div class="prozess__card-img-gradient"></div>
+            </div>
+            <div class="prozess__card-body">
+              <div class="prozess__card-number">06</div>
+              <h3 class="prozess__card-title">Wartung</h3>
+              <p class="prozess__card-desc">Durch unseren technischen Service, sowohl in der Zentrale als auch vor Ort, und durch smarte Monitoring-Funktionen gewährleisten wir einen nahezu störungsfreien Schutz.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE: title + horizontal scroll -->
+    <div class="prozess__mobile">
+      <div class="prozess__title-wrap">
+        <div class="prozess__accent-bar"></div>
+        <h2 class="prozess__title">Ihr Weg zur sicheren Baustelle – in 6 Schritten</h2>
+      </div>
+      <p class="prozess__subtitle">
+        Von der ersten Anfrage bis zur Installation – wir begleiten Sie Schritt für Schritt.
+        <strong>Persönlich, transparent und ohne Umwege.</strong>
+      </p>
+      <div class="prozess__mobile-scroll">
+        <div class="prozess__mobile-track">
+
+          <div class="prozess__card prozess__card--mobile">
+            <div class="prozess__card-img">
+              <img src="./assets/images/Images/Prozess_1.png" alt="Angebotsanfrage" loading="lazy">
+              <div class="prozess__card-img-gradient"></div>
+            </div>
+            <div class="prozess__card-body">
+              <div class="prozess__card-number">01</div>
+              <h3 class="prozess__card-title">Angebotsanfrage</h3>
+              <p class="prozess__card-desc">Sie senden uns eine Nachricht mit Ihren Kontaktdaten und einer kurzen Projektbeschreibung. Innerhalb von 60 Minuten erhalten Sie eine erste Rückmeldung.</p>
+            </div>
+          </div>
+
+          <div class="prozess__card prozess__card--mobile">
+            <div class="prozess__card-img">
+              <img src="./assets/images/Images/Prozess_2.png" alt="Planung" loading="lazy">
+              <div class="prozess__card-img-gradient"></div>
+            </div>
+            <div class="prozess__card-body">
+              <div class="prozess__card-number">02</div>
+              <h3 class="prozess__card-title">Planung</h3>
+              <p class="prozess__card-desc">Ihr zuständiger Vertriebsmitarbeiter plant gemeinsam mit Ihnen das individuelle Sicherheitskonzept und erstellt ein optimales Kameralayout.</p>
+            </div>
+          </div>
+
+          <div class="prozess__card prozess__card--mobile">
+            <div class="prozess__card-img">
+              <img src="./assets/images/Images/Prozess_3.png" alt="Vertrag & Lieferung" loading="lazy">
+              <div class="prozess__card-img-gradient"></div>
+            </div>
+            <div class="prozess__card-body">
+              <div class="prozess__card-number">03</div>
+              <h3 class="prozess__card-title">Vertrag &amp; Lieferung</h3>
+              <p class="prozess__card-desc">Nach Freigabe des finalen Angebots übernehmen wir Lieferung und Installation über unsere Logistik, damit Ihre Arbeit unterbrechungsfrei weiterläuft.</p>
+            </div>
+          </div>
+
+          <div class="prozess__card prozess__card--mobile">
+            <div class="prozess__card-img">
+              <img src="./assets/images/Images/Prozess_4.png" alt="Überwachung" loading="lazy">
+              <div class="prozess__card-img-gradient"></div>
+            </div>
+            <div class="prozess__card-body">
+              <div class="prozess__card-number">04</div>
+              <h3 class="prozess__card-title">Überwachung</h3>
+              <p class="prozess__card-desc">Wir haben alles für Sie im Blick. Über unsere App können Sie optional jederzeit per LiveView selbst einen Blick auf Ihre Baustelle werfen.</p>
+            </div>
+          </div>
+
+          <div class="prozess__card prozess__card--mobile">
+            <div class="prozess__card-img">
+              <img src="./assets/images/Images/5._Alarme.png" alt="Alarme" loading="lazy">
+              <div class="prozess__card-img-gradient"></div>
+            </div>
+            <div class="prozess__card-body">
+              <div class="prozess__card-number">05</div>
+              <h3 class="prozess__card-title">Alarme</h3>
+              <p class="prozess__card-desc">Unsere KI-gestützte Kameratechnik von Bosch und Avigilon erkennt Vorfälle präzise, während unsere Leitstelle alle Alarme zuverlässig bearbeitet.</p>
+            </div>
+          </div>
+
+          <div class="prozess__card prozess__card--mobile">
+            <div class="prozess__card-img">
+              <img src="./assets/images/Images/6._Wartung.png" alt="Wartung" loading="lazy">
+              <div class="prozess__card-img-gradient"></div>
+            </div>
+            <div class="prozess__card-body">
+              <div class="prozess__card-number">06</div>
+              <h3 class="prozess__card-title">Wartung</h3>
+              <p class="prozess__card-desc">Durch unseren technischen Service, sowohl in der Zentrale als auch vor Ort, und durch smarte Monitoring-Funktionen gewährleisten wir einen nahezu störungsfreien Schutz.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
   <script src="./assets/js/script.js"></script>
 </body>
 </html>
