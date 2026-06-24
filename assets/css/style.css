@@ -2328,3 +2328,278 @@ p {
     font-size: 0.875rem;
   }
 }
+
+/* ============================================================
+   KOOI GRUPPE SECTION
+   ============================================================ */
+
+.kooi {
+  padding: 80px 24px;
+  background: #ffffff;
+}
+
+.kooi__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.kooi__desktop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.kooi__mobile {
+  display: none;
+}
+
+.kooi__title-wrap {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.kooi__accent-bar {
+  width: 4px;
+  flex-shrink: 0;
+  background: #F2E519;
+}
+
+.kooi__title {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.kooi__text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #5C5E62;
+  margin: 0 0 16px;
+}
+
+.kooi__text--bold {
+  font-weight: 700;
+  color: #000000;
+}
+
+.kooi__checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.kooi__checklist li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.kooi__check {
+  font-weight: 700;
+  color: #F2E519;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.kooi__checklist li span:last-child {
+  font-weight: 700;
+  color: #000000;
+  font-size: 1rem;
+}
+
+.kooi__checklist--mobile li span:last-child {
+  font-size: 0.875rem;
+}
+
+.kooi__cta-row {
+  display: flex;
+  gap: 12px;
+}
+
+.kooi__btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.kooi__btn:hover {
+  opacity: 0.88;
+}
+
+.kooi__btn--primary {
+  background: #F2E519;
+  color: #000000;
+}
+
+.kooi__btn--secondary {
+  background: #EBEBEB;
+  color: #333333;
+}
+
+/* Image */
+.kooi__image-wrap {
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%);
+}
+
+.kooi__image-wrap img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.kooi__image-wrap--mobile img {
+  height: 256px;
+}
+
+@media (max-width: 767px) {
+  .kooi {
+    padding: 48px 24px;
+  }
+
+  .kooi__desktop {
+    display: none;
+  }
+
+  .kooi__mobile {
+    display: block;
+  }
+
+  .kooi__image-wrap--mobile {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%);
+    margin-bottom: 24px;
+  }
+
+  .kooi__text {
+    font-size: 0.875rem;
+  }
+
+  .kooi__btn {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+  }
+}
+
+/* ============================================================
+   FAQ SECTION
+   ============================================================ */
+
+.faq {
+  padding: 80px 24px;
+  background: #ffffff;
+}
+
+.faq__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq__title-wrap {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.faq__accent-bar {
+  width: 4px;
+  flex-shrink: 0;
+  background: #F2E519;
+}
+
+.faq__title {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.faq__subtitle {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #5C5E62;
+  margin: 0 0 48px;
+  max-width: 80ch;
+}
+
+.faq__subtitle strong {
+  font-weight: 700;
+  color: #000000;
+}
+
+.faq__divider {
+  height: 1px;
+  background: #E5E5E5;
+}
+
+.faq__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 24px;
+}
+
+.faq__trigger span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+  line-height: 1.4;
+}
+
+.faq__chevron {
+  color: #5C5E62;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.faq__item.is-open .faq__chevron {
+  transform: rotate(180deg);
+}
+
+.faq__answer {
+  display: none;
+  padding-bottom: 20px;
+}
+
+.faq__item.is-open .faq__answer {
+  display: block;
+}
+
+.faq__answer p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #5C5E62;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .faq {
+    padding: 48px 24px;
+  }
+
+  .faq__subtitle {
+    font-size: 0.875rem;
+    margin-bottom: 32px;
+  }
+
+  .faq__trigger span {
+    font-size: 0.875rem;
+  }
+}
