@@ -299,3 +299,33 @@ counters.forEach((counter) => {
     observer.observe(el);
   });
 })();
+
+/* ── FLEXIBILITAET CAROUSEL ── */
+(function () {
+  var track = document.getElementById('flexTrack');
+  var prevBtn = document.getElementById('flexPrev');
+  var nextBtn = document.getElementById('flexNext');
+
+  if (!track || !prevBtn || !nextBtn) return;
+
+  var slides = track.querySelectorAll('.flexibilitaet__slide');
+  var total = slides.length;
+  var current = 0;
+  var CARD_WIDTH_PCT = 75;
+
+  function updateTrack() {
+    track.style.transform = 'translateX(-' + (current * CARD_WIDTH_PCT) + '%)';
+    prevBtn.disabled = current <= 0;
+    nextBtn.disabled = current >= total - 1;
+  }
+
+  prevBtn.addEventListener('click', function () {
+    if (current > 0) { current--; updateTrack(); }
+  });
+
+  nextBtn.addEventListener('click', function () {
+    if (current < total - 1) { current++; updateTrack(); }
+  });
+
+  updateTrack();
+})();
