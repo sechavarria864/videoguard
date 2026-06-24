@@ -1899,3 +1899,227 @@ p {
     height: 68px;
   }
 }
+
+/* ============================================================
+   MAX FLEXIBILITAET SECTION
+   ============================================================ */
+
+.flexibilitaet {
+  padding: 80px 24px;
+  background: #ffffff;
+}
+
+.flexibilitaet__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Desktop ── */
+.flexibilitaet__desktop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.flexibilitaet__mobile {
+  display: none;
+}
+
+/* Shared title */
+.flexibilitaet__title-wrap {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.flexibilitaet__accent-bar {
+  width: 4px;
+  flex-shrink: 0;
+  background: #F2E519;
+}
+
+.flexibilitaet__title {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Text paragraphs */
+.flexibilitaet__text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #5C5E62;
+  margin: 0 0 16px;
+}
+
+.flexibilitaet__text--bold {
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 32px;
+}
+
+/* CTAs */
+.flexibilitaet__cta-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.flexibilitaet__btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.flexibilitaet__btn:hover {
+  opacity: 0.88;
+}
+
+.flexibilitaet__btn--primary {
+  background: #F2E519;
+  color: #000000;
+}
+
+.flexibilitaet__btn--secondary {
+  background: #EBEBEB;
+  color: #333333;
+}
+
+/* Nav arrows */
+.flexibilitaet__nav {
+  display: flex;
+  gap: 8px;
+}
+
+.flexibilitaet__arrow {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #D0D0D0;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.flexibilitaet__arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+/* ── Carousel ── */
+.flexibilitaet__carousel-outer {
+  overflow: hidden;
+  clip-path: inset(0 -9999px 0 0);
+}
+
+.flexibilitaet__carousel-track {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.flexibilitaet__slide {
+  flex-shrink: 0;
+  width: 75%;
+  height: 460px;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%);
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.10)) drop-shadow(0 1px 3px rgba(0,0,0,0.08));
+}
+
+.flexibilitaet__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.flexibilitaet__slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.88) 100%);
+}
+
+.flexibilitaet__slide-label {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  font-size: 2.25rem;
+  font-weight: 200;
+  color: #ffffff;
+  line-height: 1;
+}
+
+/* ── Mobile ── */
+.flexibilitaet__mobile-scroll {
+  overflow-x: auto;
+  margin: 16px -24px 24px;
+  padding: 0 24px 16px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.flexibilitaet__mobile-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.flexibilitaet__mobile-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+}
+
+.flexibilitaet__mobile-slide {
+  flex-shrink: 0;
+  width: 288px;
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%);
+}
+
+.flexibilitaet__mobile-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.flexibilitaet__mobile-slide .flexibilitaet__slide-label {
+  bottom: 16px;
+  left: 16px;
+  font-size: 1.75rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 767px) {
+  .flexibilitaet {
+    padding: 48px 24px;
+  }
+
+  .flexibilitaet__desktop {
+    display: none;
+  }
+
+  .flexibilitaet__mobile {
+    display: block;
+  }
+
+  .flexibilitaet__text {
+    font-size: 0.875rem;
+  }
+
+  .flexibilitaet__btn {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+  }
+}
