@@ -124,3 +124,56 @@ counters.forEach((counter) => {
     });
   }
 })();
+
+/* ── RISKS SLIDER ── */
+(function () {
+  var track = document.getElementById('risksTrack');
+  var trackWrap = document.getElementById('risksTrackWrap');
+  var prevBtn = document.getElementById('risksPrev');
+  var nextBtn = document.getElementById('risksNext');
+
+  if (!track || !prevBtn || !nextBtn) return;
+
+  var slides = track.querySelectorAll('.risks-slider__slide');
+  var total = slides.length;
+  var currentIndex = total - 1;
+  var GAP = 20;
+
+  function setSlideSize() {
+    var h = trackWrap.clientHeight;
+    if (h <= 0) h = 500;
+    slides.forEach(function (s) {
+      s.style.width = h + 'px';
+      s.style.height = h + 'px';
+    });
+  }
+
+  function updateTrack() {
+    var size = slides[0] ? slides[0].offsetHeight : 500;
+    var wrapWidth = trackWrap.offsetWidth;
+    var offset = -(currentIndex * (size + GAP)) + (wrapWidth - size);
+    track.style.transform = 'translateX(' + offset + 'px)';
+    prevBtn.disabled = currentIndex <= 0;
+    nextBtn.disabled = currentIndex >= total - 1;
+  }
+
+  function init() {
+    setSlideSize();
+    updateTrack();
+  }
+
+  prevBtn.addEventListener('click', function () {
+    if (currentIndex > 0) { currentIndex--; updateTrack(); }
+  });
+
+  nextBtn.addEventListener('click', function () {
+    if (currentIndex < total - 1) { currentIndex++; updateTrack(); }
+  });
+
+  window.addEventListener('resize', function () {
+    setSlideSize();
+    updateTrack();
+  });
+
+  setTimeout(init, 50);
+})();
