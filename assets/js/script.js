@@ -92,3 +92,35 @@ counters.forEach((counter) => {
   const target = Number(counter.dataset.target || 0);
   animateCounter(counter, target, 2000);
 });
+
+/* ============================================================
+   PROJECT SIZE SECTION — interactive selector
+   Append this block to the bottom of assets/js/script.js
+   ============================================================ */
+
+(function () {
+  var optionsContainer = document.getElementById('projectSizeOptions');
+  if (!optionsContainer) return;
+
+  optionsContainer.addEventListener('click', function (e) {
+    var btn = e.target.closest('.project-size__option');
+    if (!btn) return;
+
+    // Deselect all, select clicked
+    optionsContainer.querySelectorAll('.project-size__option').forEach(function (el) {
+      el.classList.remove('project-size__option--selected');
+    });
+    btn.classList.add('project-size__option--selected');
+  });
+
+  // "Weiter" button — wire up as needed
+  var submitBtn = document.getElementById('projectSizeSubmit');
+  if (submitBtn) {
+    submitBtn.addEventListener('click', function () {
+      var selected = optionsContainer.querySelector('.project-size__option--selected');
+      var size = selected ? selected.getAttribute('data-size') : '';
+      // Replace the line below with your real next-step logic:
+      console.log('Selected project size:', size);
+    });
+  }
+})();
