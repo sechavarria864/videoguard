@@ -494,6 +494,142 @@
 
   </div>
 </section>
+
+  <!-- ============================================================
+     TESTIMONIALS CAROUSEL SECTION
+     Files needed:
+       - ./assets/images/Images/Testimonial_1.png
+       - ./assets/images/Images/Testimonial_2.png
+       - ./assets/images/Images/Testimonial_3.png
+       - ./assets/images/Images/Testimonial_4.png
+       - ./assets/images/logos/Client_Logo_1.png  (ZÜBLIN)
+       - ./assets/images/logos/Client_Logo_2.png  (Deutsche Bahn)
+       - ./assets/images/logos/Client_Logo_3.png  (mainova)
+       - ./assets/images/logos/Client_Logo_4.png  (Vestas)
+       - ./assets/images/logos/Client_Logo_5.png  (STRABAG)
+       - ./assets/images/logos/Client_Logo_6.png  (GE)
+     ============================================================ -->
+<section class="testimonials">
+  <div class="testimonials__inner">
+
+    <!-- Title -->
+    <div class="testimonials__title-wrap">
+      <div class="testimonials__accent-bar"></div>
+      <h2 class="testimonials__title">Zufriedene Video Guard Kunden</h2>
+    </div>
+
+    <!-- Two-column: testimonials left, logo wheel right -->
+    <div class="testimonials__grid">
+
+      <!-- Left: rotating testimonial cards -->
+      <div class="testimonials__cards-col">
+        <div class="testimonials__cards-stage" id="testimonialsStage">
+
+          <div class="testimonials__card active">
+            <div class="testimonials__card-bar"></div>
+            <div class="testimonials__card-logo">
+              <img src="./assets/images/Images/Testimonial_1.png" alt="Company logo">
+            </div>
+            <p class="testimonials__card-text">"Durch die Zusammenarbeit mit Videoguard24 konnte dieser Partner gefunden werden und erfüllt unsere Erwartungshaltung in allen Blickwinkeln."</p>
+            <div class="testimonials__card-author">
+              <p class="testimonials__author-name">Alexander L. Tillmann</p>
+              <p class="testimonials__author-company">Unternehmens-sicherheitsmanager - Mainova AG</p>
+            </div>
+          </div>
+
+          <div class="testimonials__card">
+            <div class="testimonials__card-bar"></div>
+            <div class="testimonials__card-logo">
+              <img src="./assets/images/Images/Testimonial_2.png" alt="Company logo">
+            </div>
+            <p class="testimonials__card-text">"Wir empfehlen VIDEO GUARD wegen der außergewöhnlich hohen Kommunikationsbereitschaft und dem zuverlässigen Arbeitsverhältnis auch bei Problemen!"</p>
+            <div class="testimonials__card-author">
+              <p class="testimonials__author-name">Marco Burghardt</p>
+              <p class="testimonials__author-company">Bau- und Projektmanagement Bonn</p>
+            </div>
+          </div>
+
+          <div class="testimonials__card">
+            <div class="testimonials__card-bar"></div>
+            <div class="testimonials__card-logo">
+              <img src="./assets/images/Images/Testimonial_3.png" alt="Company logo">
+            </div>
+            <p class="testimonials__card-text">"VIDEO GUARD bietet für uns das sicherste Gesamtkonzept im Zusammenspiel zwischen hervorragender Technik, Selbstüberwachung und professionellem Personal in der Leitstelle"</p>
+            <div class="testimonials__card-author">
+              <p class="testimonials__author-name">Nils Netzer</p>
+              <p class="testimonials__author-company">E-Shelter</p>
+            </div>
+          </div>
+
+          <div class="testimonials__card">
+            <div class="testimonials__card-bar"></div>
+            <div class="testimonials__card-logo">
+              <img src="./assets/images/Images/Testimonial_4.png" alt="Company logo">
+            </div>
+            <p class="testimonials__card-text">"Ich möchte VIDEO GUARD in Zukunft am liebsten auf jeder Baustelle dabeihaben."</p>
+            <div class="testimonials__card-author">
+              <p class="testimonials__author-name">Jörg Fritz</p>
+              <p class="testimonials__author-company">MBN Bau GmbH</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Dots -->
+        <div class="testimonials__dots" id="testimonialsDots">
+          <button class="testimonials__dot active" data-index="0" aria-label="Testimonial 1"></button>
+          <button class="testimonials__dot" data-index="1" aria-label="Testimonial 2"></button>
+          <button class="testimonials__dot" data-index="2" aria-label="Testimonial 3"></button>
+          <button class="testimonials__dot" data-index="3" aria-label="Testimonial 4"></button>
+        </div>
+      </div>
+
+      <!-- Right: scrolling logo wheel -->
+      <div class="testimonials__logos-col">
+        <div class="testimonials__logos-fade testimonials__logos-fade--left"></div>
+        <div class="testimonials__logos-fade testimonials__logos-fade--right"></div>
+        <div class="testimonials__logos-track">
+          <!-- First set -->
+          <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_1.png" alt="ZÜBLIN" height="50"></div>
+          <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_2.png" alt="Deutsche Bahn" height="50"></div>
+          <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_3.png" alt="mainova" height="50"></div>
+          <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_4.png" alt="Vestas" height="50"></div>
+          <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_5.png" alt="STRABAG" height="50"></div>
+          <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_6.png" alt="GE" height="50"></div>
+          <!-- Duplicate for seamless loop -->
+          <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_1.png" alt="ZÜBLIN" height="50"></div>
+          <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_2.png" alt="Deutsche Bahn" height="50"></div>
+          <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_3.png" alt="mainova" height="50"></div>
+          <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_4.png" alt="Vestas" height="50"></div>
+          <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_5.png" alt="STRABAG" height="50"></div>
+          <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_6.png" alt="GE" height="50"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Mobile logo wheel (below cards) -->
+    <div class="testimonials__logos-mobile">
+      <div class="testimonials__logos-fade testimonials__logos-fade--left"></div>
+      <div class="testimonials__logos-fade testimonials__logos-fade--right"></div>
+      <div class="testimonials__logos-track testimonials__logos-track--mobile">
+        <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_1.png" alt="ZÜBLIN" height="28"></div>
+        <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_2.png" alt="Deutsche Bahn" height="28"></div>
+        <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_3.png" alt="mainova" height="28"></div>
+        <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_4.png" alt="Vestas" height="28"></div>
+        <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_5.png" alt="STRABAG" height="28"></div>
+        <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_6.png" alt="GE" height="28"></div>
+        <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_1.png" alt="ZÜBLIN" height="28"></div>
+        <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_2.png" alt="Deutsche Bahn" height="28"></div>
+        <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_3.png" alt="mainova" height="28"></div>
+        <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_4.png" alt="Vestas" height="28"></div>
+        <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_5.png" alt="STRABAG" height="28"></div>
+        <div class="testimonials__logo-item"><img src="./assets/images/logos/Client_Logo_6.png" alt="GE" height="28"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
   <script src="./assets/js/script.js"></script>
 </body>
 </html>
