@@ -880,10 +880,8 @@ p {
 }
 
 .risks-slider__track-wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
   overflow: hidden;
+  clip-path: inset(0 0 0 -9999px);
   position: relative;
   height: 500px;
 }
@@ -1568,13 +1566,19 @@ p {
    ============================================================ */
 
 .prozess {
-  padding: 80px 24px;
+  padding: 80px 0;
   background-color: #001F3F;
+  overflow: visible;
 }
 
 .prozess__inner {
   max-width: 1200px;
   margin: 0 auto;
+  overflow: visible;
+}
+
+.prozess__left {
+  padding-left: 24px;
 }
 
 /* ── Desktop layout ── */
@@ -1912,6 +1916,10 @@ p {
 .flexibilitaet__inner {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.flexibilitaet__left {
+  padding-left: 24px;
 }
 
 /* ── Desktop ── */
