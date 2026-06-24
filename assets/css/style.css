@@ -2123,3 +2123,208 @@ p {
     font-size: 0.875rem;
   }
 }
+
+/* ============================================================
+   ANGEBOT ERHALTEN SECTION
+   ============================================================ */
+
+.angebot {
+  padding: 80px 24px;
+  background-color: #001F3F;
+}
+
+.angebot__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.angebot__title-wrap {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.angebot__accent-bar {
+  width: 4px;
+  flex-shrink: 0;
+  background: #F2E519;
+}
+
+.angebot__title {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.angebot__text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 0 0 16px;
+  max-width: 72ch;
+}
+
+.angebot__text strong {
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .angebot {
+    padding: 48px 24px;
+  }
+
+  .angebot__text {
+    font-size: 0.875rem;
+  }
+}
+
+/* ============================================================
+   BROCHURE DOWNLOAD SECTION
+   ============================================================ */
+
+.brochure {
+  padding: 80px 24px 80px;
+  background-color: #001F3F;
+}
+
+.brochure__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.brochure__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* Left */
+.brochure__title-wrap {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.brochure__accent-bar {
+  width: 4px;
+  flex-shrink: 0;
+  background: #F2E519;
+}
+
+.brochure__title {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.brochure__text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 0 0 24px;
+}
+
+.brochure__download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #F2E519;
+  color: #191845;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.10), 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.brochure__download-btn:hover {
+  opacity: 0.88;
+}
+
+/* Right: video */
+.brochure__video-wrap {
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.10)) drop-shadow(0 1px 3px rgba(0,0,0,0.08));
+}
+
+.brochure__video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 92%, 92% 100%, 0 100%);
+}
+
+.brochure__video-thumb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.brochure__video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.brochure__video-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+    rgba(242,229,25,0.80) 0%,
+    rgba(242,229,25,0.40) 40%,
+    rgba(242,229,25,0.10) 100%);
+}
+
+.brochure__play-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.brochure__video-thumb:hover .brochure__play-icon {
+  transform: scale(1.1);
+}
+
+.brochure__iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  border: none;
+}
+
+.brochure__iframe.active {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .brochure {
+    padding: 48px 24px;
+  }
+
+  .brochure__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .brochure__text {
+    font-size: 0.875rem;
+  }
+}
