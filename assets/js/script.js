@@ -329,3 +329,17 @@ counters.forEach((counter) => {
 
   updateTrack();
 })();
+
+/* ── BROCHURE VIDEO ── */
+(function () {
+  var playBtn = document.getElementById('brochurePlayBtn');
+  var iframe = document.getElementById('brochureIframe');
+
+  if (!playBtn || !iframe) return;
+
+  playBtn.addEventListener('click', function () {
+    iframe.src = iframe.getAttribute('data-src');
+    iframe.classList.add('active');
+    playBtn.style.display = 'none';
+  });
+})();
