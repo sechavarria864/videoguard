@@ -1562,3 +1562,245 @@ p {
     height: 10px;
   }
 }
+
+/* ============================================================
+   PROZESS CAROUSEL SECTION
+   ============================================================ */
+
+.prozess {
+  padding: 80px 24px;
+  background-color: #001F3F;
+}
+
+.prozess__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ── Desktop layout ── */
+.prozess__desktop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.prozess__mobile {
+  display: none;
+}
+
+/* Shared title block */
+.prozess__title-wrap {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.prozess__accent-bar {
+  width: 4px;
+  flex-shrink: 0;
+  background: #F2E519;
+}
+
+.prozess__title {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.prozess__subtitle {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0 0 32px;
+}
+
+.prozess__subtitle strong {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* CTA buttons */
+.prozess__cta-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.prozess__btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.prozess__btn:hover {
+  opacity: 0.88;
+}
+
+.prozess__btn--primary {
+  background: #F2E519;
+  color: #000000;
+}
+
+.prozess__btn--secondary {
+  background: #EBEBEB;
+  color: #333333;
+}
+
+/* Nav arrows */
+.prozess__nav {
+  display: flex;
+  gap: 8px;
+}
+
+.prozess__arrow {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #D0D0D0;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+  flex-shrink: 0;
+}
+
+.prozess__arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+/* ── Carousel ── */
+.prozess__carousel-outer {
+  overflow: hidden;
+  /* Allow cards to overflow to the right */
+  clip-path: inset(0 -9999px 0 0);
+}
+
+.prozess__carousel-track {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Cards */
+.prozess__card {
+  flex-shrink: 0;
+  width: 58%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%);
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.10)) drop-shadow(0 1px 3px rgba(0,0,0,0.08));
+  overflow: hidden;
+}
+
+.prozess__card-img {
+  position: relative;
+  height: 128px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.prozess__card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.prozess__card-img-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, transparent, #F2E519);
+}
+
+.prozess__card-body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.prozess__card-number {
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: #000000;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.prozess__card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 12px;
+}
+
+.prozess__card-desc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #808187;
+  margin: 0;
+}
+
+/* ── Mobile layout ── */
+.prozess__mobile-scroll {
+  overflow-x: auto;
+  margin: 0 -24px;
+  padding: 0 24px 16px;
+  /* Hide scrollbar */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.prozess__mobile-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.prozess__mobile-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+}
+
+.prozess__card--mobile {
+  width: 280px;
+  min-height: 380px;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%);
+}
+
+.prozess__card--mobile .prozess__card-img {
+  height: 112px;
+}
+
+.prozess__card--mobile .prozess__card-number {
+  font-size: 2rem;
+}
+
+.prozess__card--mobile .prozess__card-title {
+  font-size: 1.125rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 767px) {
+  .prozess {
+    padding: 48px 24px;
+  }
+
+  .prozess__desktop {
+    display: none;
+  }
+
+  .prozess__mobile {
+    display: block;
+  }
+}
+
