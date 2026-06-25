@@ -220,19 +220,23 @@ counters.forEach((counter) => {
 
 /* ── PROZESS CAROUSEL ── */
 (function () {
+  var outer = document.querySelector('.prozess__carousel-outer');
   var track = document.getElementById('prozessTrack');
   var prevBtn = document.getElementById('prozessPrev');
   var nextBtn = document.getElementById('prozessNext');
 
-  if (!track || !prevBtn || !nextBtn) return;
+  if (!outer || !track || !prevBtn || !nextBtn) return;
 
   var cards = track.querySelectorAll('.prozess__card');
   var total = cards.length;
   var current = 0;
-  var CARD_WIDTH_PCT = 58;
+  var CARD_WIDTH_RATIO = 0.58;
+  var GAP = 16;
 
   function updateTrack() {
-    track.style.transform = 'translateX(-' + (current * CARD_WIDTH_PCT) + '%)';
+    var cardW = outer.clientWidth * CARD_WIDTH_RATIO;
+    var offset = current * (cardW + GAP);
+    track.style.transform = 'translateX(-' + offset + 'px)';
     prevBtn.disabled = current <= 0;
     nextBtn.disabled = current >= total - 1;
   }
@@ -245,6 +249,7 @@ counters.forEach((counter) => {
     if (current < total - 1) { current++; updateTrack(); }
   });
 
+  window.addEventListener('resize', updateTrack);
   updateTrack();
 })();
 
@@ -302,19 +307,23 @@ counters.forEach((counter) => {
 
 /* ── FLEXIBILITAET CAROUSEL ── */
 (function () {
+  var outer = document.querySelector('.flexibilitaet__carousel-outer');
   var track = document.getElementById('flexTrack');
   var prevBtn = document.getElementById('flexPrev');
   var nextBtn = document.getElementById('flexNext');
 
-  if (!track || !prevBtn || !nextBtn) return;
+  if (!outer || !track || !prevBtn || !nextBtn) return;
 
   var slides = track.querySelectorAll('.flexibilitaet__slide');
   var total = slides.length;
   var current = 0;
-  var CARD_WIDTH_PCT = 75;
+  var CARD_WIDTH_RATIO = 0.75;
+  var GAP = 16;
 
   function updateTrack() {
-    track.style.transform = 'translateX(-' + (current * CARD_WIDTH_PCT) + '%)';
+    var cardW = outer.clientWidth * CARD_WIDTH_RATIO;
+    var offset = current * (cardW + GAP);
+    track.style.transform = 'translateX(-' + offset + 'px)';
     prevBtn.disabled = current <= 0;
     nextBtn.disabled = current >= total - 1;
   }
@@ -327,6 +336,7 @@ counters.forEach((counter) => {
     if (current < total - 1) { current++; updateTrack(); }
   });
 
+  window.addEventListener('resize', updateTrack);
   updateTrack();
 })();
 
