@@ -1703,7 +1703,8 @@ p {
 /* Cards */
 .prozess__card {
   flex-shrink: 0;
-  width: 58%;
+  width: calc(58% - 16px);
+  margin-right: 16px;
   background: #ffffff;
   display: flex;
   flex-direction: column;
