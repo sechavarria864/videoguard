@@ -1809,7 +1809,8 @@ p {
 /* ── Responsive ── */
 @media (max-width: 767px) {
   .prozess {
-    padding: 48px 24px;
+    padding: 48px 0 48px 24px; /* was: 48px 24px — removed right padding */
+    overflow-x: clip;
   }
 
   .prozess__desktop {
