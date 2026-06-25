@@ -1690,7 +1690,7 @@ p {
 
 /* ── Carousel ── */
 .prozess__carousel-outer {
-  overflow: hidden;
+  overflow: visible;
   clip-path: inset(0 -9999px 0 0);
   min-width: 0;
 }
