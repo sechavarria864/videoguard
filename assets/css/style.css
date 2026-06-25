@@ -879,8 +879,14 @@ p {
   cursor: default;
 }
 
+.risks-slider__slider-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 .risks-slider__track-wrap {
-  overflow: hidden;
+  overflow: visible;
   clip-path: inset(0 0 0 -9999px);
   position: relative;
   height: 500px;
@@ -1683,8 +1689,7 @@ p {
 
 /* ── Carousel ── */
 .prozess__carousel-outer {
-  overflow: hidden;
-  /* Allow cards to overflow to the right */
+  overflow: visible;
   clip-path: inset(0 -9999px 0 0);
 }
 
@@ -2025,7 +2030,7 @@ p {
 
 /* ── Carousel ── */
 .flexibilitaet__carousel-outer {
-  overflow: hidden;
+  overflow: visible;
   clip-path: inset(0 -9999px 0 0);
 }
 
