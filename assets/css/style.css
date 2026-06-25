@@ -1080,6 +1080,10 @@ p {
     padding: 48px 0;
   }
 
+   .prozess__inner {
+    padding: 0;
+  }
+
   .risks-slider__track-wrap {
     display: none;
   }
