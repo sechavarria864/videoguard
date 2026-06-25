@@ -1575,7 +1575,7 @@ p {
 .prozess {
   padding: 80px 0;
   background-color: #001F3F;
-  overflow: visible;
+  overflow-x: hidden;
 }
 
 .prozess__inner {
@@ -1918,6 +1918,7 @@ p {
 .flexibilitaet {
   padding: 80px 24px;
   background: #ffffff;
+  overflow-x: hidden;
 }
 
 .flexibilitaet__inner {
