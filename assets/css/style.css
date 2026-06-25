@@ -884,6 +884,7 @@ p {
   clip-path: inset(0 0 0 -9999px);
   position: relative;
   height: 500px;
+  margin-top: 32px;
 }
 
 @media (max-width: 1024px) {
