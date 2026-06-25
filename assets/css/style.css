@@ -1575,7 +1575,7 @@ p {
 .prozess {
   padding: 80px 0;
   background-color: #001F3F;
-  overflow-x: hidden;
+  overflow-x: visible;
 }
 
 .prozess__inner {
