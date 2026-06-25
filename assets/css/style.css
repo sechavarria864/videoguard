@@ -1582,10 +1582,11 @@ p {
   max-width: 1200px;
   margin: 0 auto;
   overflow: visible;
+  padding: 0 24px;
 }
 
 .prozess__left {
-  padding-left: 24px;
+  padding-left: 0;
 }
 
 /* ── Desktop layout ── */
